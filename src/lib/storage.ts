@@ -28,15 +28,27 @@ export function getSavedEntries(): SavedEntry[] {
   }
 }
 
-export function saveEntry(entry: Omit<SavedEntry, "id" | "savedAt">): void {
+export function saveEntry(
+  entry: Omit<SavedEntry, "id" | "savedAt"> & { id?: string }
+): void {
   const entries = getSavedEntries();
+
+  const existingIndex =
+    entry.id != null ? entries.findIndex((e) => e.id === entry.id) : -1;
+
   const newEntry: SavedEntry = {
     ...entry,
     thirdPartyFee: entry.thirdPartyFee ?? 0,
-    id: crypto.randomUUID(),
+    id: entry.id ?? crypto.randomUUID(),
     savedAt: new Date().toISOString(),
   };
-  entries.unshift(newEntry);
+
+  if (existingIndex >= 0) {
+    entries[existingIndex] = newEntry;
+  } else {
+    entries.unshift(newEntry);
+  }
+
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
 }
 
