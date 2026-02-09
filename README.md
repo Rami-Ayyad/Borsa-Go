@@ -6,6 +6,7 @@ It helps you calculate gross and net profit, purification amounts, and keep a hi
 ### Features
 
 - **Interactive calculator**
+
   - Purchase and market value inputs
   - Support for direct market value or shares × price
   - Total fees or multiple discrete fee items
@@ -16,6 +17,7 @@ It helps you calculate gross and net profit, purification amounts, and keep a hi
     - Final (purified) profit
 
 - **Saved calculations**
+
   - Save any calculation to local storage
   - View all saved entries in a table
   - Edit existing entries and re-save without duplicating
@@ -76,4 +78,3 @@ npm run lint
 
 - Saved calculations are stored in the browser’s `localStorage`, keyed by `borsa_go_saved_entries`.
 - Exported CSV files can be opened in Excel, Google Sheets, or any spreadsheet app.
-
