@@ -10,6 +10,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // GitHub Pages base path for repo: https://rami-ayad.github.io/Borsa-Go/
+  // GitHub Pages base path for repo: https://rami-ayyad.github.io/Borsa-Go/
   base: "/Borsa-Go/",
 });

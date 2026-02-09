@@ -40,7 +40,7 @@ It helps you calculate gross and net profit, purification amounts, and keep a hi
 1. **Clone the repo**
 
 ```bash
-git clone git@github.com:Rami-Ayad/Borsa-Go.git
+git clone git@github.com:Rami-Ayyad/Borsa-Go.git
 cd Borsa-Go
 ```
 
