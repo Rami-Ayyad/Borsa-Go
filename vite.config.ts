@@ -12,4 +12,8 @@ export default defineConfig({
   },
   // GitHub Pages base path for repo: https://rami-ayyad.github.io/Borsa-Go/
   base: "/Borsa-Go/",
+  build: {
+    // Output to `docs` so GitHub Pages can serve from main/docs
+    outDir: "docs",
+  },
 });
