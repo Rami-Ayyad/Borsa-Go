@@ -40,6 +40,7 @@ export default function Calculator() {
   } | null>(null);
 
   const location = useLocation();
+
   const [editingId, setEditingId] = useState<string | null>(null);
 
   const totalFeesValue =
